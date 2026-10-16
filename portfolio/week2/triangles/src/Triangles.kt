@@ -9,7 +9,7 @@ typealias Triangle = Triple<Double,Double,Double>
 
 fun isValidTriangle(triangle: Triangle): Boolean {
     val (a,b,c)= triangle
-    return a < b + c && b < a + c && c < a+b
+    return a <= b + c && b < a + c && c < a+b
 }
 
 fun triangleArea(triangle: Triangle): Double { 
