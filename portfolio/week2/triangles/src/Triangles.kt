@@ -9,12 +9,18 @@ typealias Triangle = Triple<Double,Double,Double>
 
 fun isValidTriangle(triangle: Triangle): Boolean {
     val (a,b,c)= triangle
-    return a <= b + c && b < a + c && c < a+b
+    return a < b + c && b < a + c && c < a+b
 }
 
 fun triangleArea(triangle: Triangle): Double { 
     val (a, b, c) = triangle
-    if(!isValidTriangle(triangle)) return Double.NaN
+    if(!isValidTriangle(triangle)) {
+        if ((a+b==c) || (a +c==b) || (b+c ==a)) {
+        return 0.0
+        }
+        return Double.NaN
+    }
+
     val s = (a+b+c) /2.0
     val areaSquared = s* (s-a) * (s-b) * (s-c)
     if (areaSquared <0.0) return 0.0
