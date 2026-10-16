@@ -16,5 +16,7 @@ fun triangleArea(triangle: Triangle): Double {
     val (a, b, c) = triangle
     if(!isValidTriangle(triangle)) return Double.NaN
     val s = (a+b+c) /2.0
-    return sqrt(s* (s-a) * (s-b) * (s-c)) 
+    val areaSquared = s* (s-a) * (s-b) * (s-c)
+    if (areaSquared <0.0) return 0.0
+    return sqrt(areaSquared)
 } 
