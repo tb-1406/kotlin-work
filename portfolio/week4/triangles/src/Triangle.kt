@@ -25,4 +25,4 @@ class Triangle(val sideA: Double, val sideB: Double, val sideC: Double) {
     override fun toString(): String {
         return "Triangle($sideA, $sideB, $sideC)"
     }
-}./kotlin test -m triangles
+}
