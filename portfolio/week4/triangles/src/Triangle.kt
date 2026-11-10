@@ -13,7 +13,7 @@ class Triangle(val sideA: Double, val sideB: Double, val sideC: Double) {
     val perimeter: Double
         get() = sideA +sideB +sideC
 
-    val semi perimeter: Double
+    val semiPerimeter: Double
         get()= perimeter/2.0
 
     val area: Double
@@ -25,4 +25,4 @@ class Triangle(val sideA: Double, val sideB: Double, val sideC: Double) {
     override fun toString(): String {
         return "Triangle($sideA, $sideB, $sideC)"
     }
-}
+}./kotlin test -m triangles
